@@ -2,6 +2,7 @@ import random as r
 import pygame
 import sys as sus
 pygame.init()
+start = pygame.time.get_ticks()
 
 dev = False
 
@@ -47,6 +48,10 @@ while True:
 print('no, no no no')
 
 print('(switch to output)')
-w = pygame.display.set_mode([400,300])
+da_game = pygame.display.set_mode([400,300])
 
-w2 = pygame.display.set_mode([400,300])
+c = pygame.time.clock()
+
+while True:
+  c.tick(40)
+  

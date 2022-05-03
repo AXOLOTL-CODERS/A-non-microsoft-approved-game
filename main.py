@@ -31,7 +31,7 @@ print('it has nothing to do with a game')
 
 
 
-
+# password
 while True:
   password = input('password to the massive pakage of bordom:')
   password = password.lower()
@@ -50,8 +50,15 @@ print('no, no no no')
 print('(switch to output)')
 da_game = pygame.display.set_mode([400,300])
 
-c = pygame.time.clock()
+c = pygame.time.Clock()
 
-while True:
+tim = 0
+timlim1 = 60000
+
+looping = True
+while looping:
   c.tick(40)
-  
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      looping = False
+

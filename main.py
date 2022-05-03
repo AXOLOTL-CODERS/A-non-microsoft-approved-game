@@ -53,7 +53,8 @@ da_game = pygame.display.set_mode([400,300])
 c = pygame.time.Clock()
 
 tim = 0
-timlim1 = 60000
+timlim1 = 5000
+points = 0
 
 looping = True
 while looping:
@@ -61,4 +62,7 @@ while looping:
   for event in pygame.event.get():
     if event.type == pygame.QUIT:
       looping = False
-
+    if event.type == pygame.MOUSEBUTTONDOWN:
+      points += 1
+      print('you have',points)
+      

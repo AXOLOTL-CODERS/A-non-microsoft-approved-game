@@ -1,11 +1,14 @@
 import random as r
 import pygame
 import sys as sus
+import lib
 pygame.init()
 start = pygame.time.get_ticks()
 
 dev = False
 
+file = open("upgrades.txt", "r")
+upgrades = file.read()
 
 print('sorta a ripoff of there is no game by kasimoto')
 pygame.time.wait(1000)
@@ -39,12 +42,16 @@ while True:
     break
   elif password == 'debug mode':
     dev = True
+    print('guess u want to see a lot of useless junk')
+    print('debug mode activated!')
+    pygame.time.wait(1000)
   else:
     sus.exit('there is no GAME')
 
+if dev:
+  print(upgrades)
 
-
-
+# things
 print('no, no no no')
 
 print('(switch to output)')

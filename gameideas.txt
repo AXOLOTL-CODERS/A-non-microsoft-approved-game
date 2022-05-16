@@ -1,0 +1,5 @@
+mad libs
+pac man
+flappy bird
+sudoku
+hangman

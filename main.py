@@ -119,9 +119,11 @@ cash = 15
 is_boosted = False
 
 nobill = False
-
+looping = True
 print('THE MONEY(now with stock)')
-while True:
+while looping:
+  if cash == 1000:
+    looping = False
   worker = r.randint(1, 1000)
   bills = r.randint(1,2)
   print("food levels are ",food)
@@ -264,6 +266,16 @@ while True:
 
   if cash <= 0:
         sus.exit("you're broke")
+  if cash >= 1000:
+    looping = False
 
 
+
+
+lib.mad_hacker(3)
+
+firefox = input('do you want to open firefox?(y/n)\n')
+if firefox == "y":
+  print('open')
+  antivirus = input('do you want to install AVG antivirus')  
 
